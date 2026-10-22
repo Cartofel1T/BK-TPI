@@ -11,6 +11,9 @@ app.use(express.json());
 const authRutas = require('./rutas/auth.routes');
 app.use('/api/auth', authRutas);
 
+const serviciosRutas = require('./rutas/servicios.routes');
+app.use('/api/servicios', serviciosRutas);
+
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (req, res) => {
