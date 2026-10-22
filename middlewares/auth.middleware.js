@@ -30,4 +30,4 @@ const verificarAdmin = (req, res, next) => {
     next();
 }
 
-module.exports = { verificarAutenticacion };
+module.exports = { verificarAutenticacion, verificarAdmin };

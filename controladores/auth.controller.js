@@ -41,7 +41,6 @@ const loginUsuario = async (req, res) => {
 
         const payload = { id: usuario.id_usuario, rol: usuario.rol };
 
-        console.log("El secreto JWT cargado es:", process.env.JWT_SECRET);
         const token = hashpass.generarToken(process.env.JWT_SECRET, 6, payload);
 
         res.status(200).json({

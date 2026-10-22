@@ -10,7 +10,7 @@ const obtenerServicios = async (req, res) => {
     }
 };
 
-const crearServicios = async (req, res) => {
+const crearServicio = async (req, res) => {
     try {
         const { nombre, descripcion, precio } = req.body;
         const [resultado] = await db.query(
@@ -22,5 +22,4 @@ const crearServicios = async (req, res) => {
         res.status(500).json({ error: 'error al crear servicio' });
     }
 };
-
-module.exports = { obtenerServicios, crearServicios };
+module.exports = { obtenerServicios, crearServicio };
